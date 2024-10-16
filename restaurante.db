@@ -1,0 +1,14 @@
+CREATE TABLE tipos_pratos (
+    id INTEGER PRIMARY KEY
+AUTOINCREMENT,
+    tipo TEXT NOT NULL
+);
+CREATE TABLE pratos(
+     id INTEGER PRIMARY KEY
+AUTOINCREMENT,
+    nome text NOT NULL,
+    valor REAL NOT NULL,
+    tipo_id INTEGER,
+    FOREIGN KEY(tipo_id)
+REFERENCES tipo_prato(id)
+);
