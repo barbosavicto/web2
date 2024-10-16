@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardapio - restaurante Cpii</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #f8b400;
+            padding: 20px;
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #f8b400;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #e7a700;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>restaurante Cpii</h1>
+</header>
+
+<form id="reservation-form">
+    <h2>Adicione o seu prato</h2>
+    
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="tipo-prato">Tipo de prato:</label>
+    <input type="tipo prato" id="tipo-prato" name="tipo-prato" required>
+    
+
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" name="valor"  required>
+
+    <button type="submit">Confirmar inclusão do prato no cardápio</button>
+</form>
+
+</body>
+</html>
