@@ -8,7 +8,7 @@ const server = http.createServer(function (req, res) {
     const nomearquivo = "." + q.pathname;
 
     if (nomearquivo === "./") {
-        fs.readFile("formulario.html", function (err, data) {
+        fs.readFile("index.html", function (err, data) {
             if (err) {
                 res.writeHead(404, { 'Content-Type': 'text/html' });
                 return res.end("404 Arquivo não encontrado!");
@@ -32,14 +32,14 @@ const server = http.createServer(function (req, res) {
         let tipo_prato = q.query.tipo_prato;
         let valor = q.query.valor;
 
-        let db = new sqlite3.Database('./db/restaurante.db', (err) => {
+        let db = new sqlite3.Database('./db/cardapio.db', (err) => {
             if (err) {
                 return console.error(err.message);
             }
             console.log('Conectou com o banco de dados!');
         });
 
-        db.run(`INSERT INTO restaurante(nome, tipo_prato, valor) VALUES(?, ?, ?)`, [nome, tipo_prato, valor], function (err) {
+        db.run(`INSERT INTO pratos(nome, tipo_prato, valor) VALUES(?, ?, ?)`, [nome, tipo_prato, valor], function (err) {
             if (err) {
                 return console.log(err.message);
             }
